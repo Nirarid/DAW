@@ -1,0 +1,77 @@
+<html>
+<script>
+function onscreen(val)
+{
+document.getElementById("screen").value+=val
+ }
+function solve()
+{
+let x = document.getElementById("screen").value
+let y = eval(x)
+document.getElementById("screen").value = y
+}
+function clr()
+{
+document.getElementById("screen").value = ""
+}
+</script>
+<style>
+.button
+{
+border-radius: 10px;
+background-color:#008CBA;
+color: black;
+border-color:black ;
+width:100%;
+}
+.clear
+{
+border-radius: 10px;
+background-color:#008CBA;
+color: black;
+border-color:black;
+width:100%;
+}
+.display
+{
+border-radius: 10px;
+text-align: center;
+background-color:white;
+width:100%
+}
+</style>
+<body>
+	<table border="1">
+		<tr>
+			<td colspan="4"><input type="text" class="display" id="screen"/></td>
+		</tr>
+		<tr>
+			<td colspan="4"><input type="button" class="clear" value="c" onclick="clr()"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" class="button" value="1" onclick="onscreen('1')"/> </td>
+			<td><input type="button" class="button" value="2" onclick="onscreen('2')"/> </td>
+			<td><input type="button" class="button" value="3" onclick="onscreen('3')"/> </td>
+			<td><input type="button" class="button" value="+" onclick="onscreen('+')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" class="button" value="4" onclick="onscreen('4')"/> </td>
+			<td><input type="button" class="button" value="5" onclick="onscreen('5')"/> </td>
+			<td><input type="button" class="button" value="6" onclick="onscreen('6')"/> </td>
+			<td><input type="button" class="button" value="-" onclick="onscreen('-')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" class="button" value="7" onclick="onscreen('7')"/> </td>
+			<td><input type="button" class="button" value="8" onclick="onscreen('8')"/> </td>
+			<td><input type="button" class="button" value="9" onclick="onscreen('9')"/> </td>
+			<td><input type="button" class="button" value="*" onclick="onscreen('*')"/> </td>
+		</tr>
+		<tr>
+			<td><input type="button" class="button" value="." onclick="onscreen('.')"/> </td>
+			<td><input type="button" class="button" value="0" onclick="onscreen('0')"/> </td>
+			<td><input type="button" class="button" value="=" onclick="solve()"/> </td>
+			<td><input type="button" class="button" value="/" onclick="onscreen('/')"/> </td>
+		</tr>
+	</table>
+</body>
+<html>
